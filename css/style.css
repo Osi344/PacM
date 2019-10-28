@@ -5,3 +5,10 @@
     border-width: 1px;
     background-color: #505050;
 }
+
+#home {
+    left: 0px;
+    width: 35px;
+    height: 35px;
+    background: url('images/Pac-Man.png') 0 0;
+  }

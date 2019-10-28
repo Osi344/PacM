@@ -9,26 +9,26 @@ var unit = 30;
 //     return (unit * z);
 // }
 
-function horizontal(x, y, nb) {
+function horizontal(x, y, nb,z) {
     for (i = 0; i < nb; i++) {
         console.log("x: "+x+" / y: "+y);
         ctx.moveTo(x, y);
         ctx.beginPath();
         ctx.arc(x, y, 3, 0, 2 * Math.PI);
         ctx.fill();
-        x += unit;
+        x += (unit * z);
     }
     return x;
 }
 
-function vertical(x, y, nb) {
+function vertical(x, y, nb,z) {
     for (i = 0; i < nb; i++) {
         console.log("x: "+x+" / y: "+y);
         ctx.moveTo(x, y);
         ctx.beginPath();
         ctx.arc(x, y, 3, 0, 2 * Math.PI);
         ctx.fill();
-        y += unit;
+        y += (unit * z);
     }
     return y;
 }
@@ -44,13 +44,82 @@ var ctx = c.getContext("2d");
 ctx.fillStyle = "#cef410";
 
 console.log("curX: "+curX+" / curY: "+curY);
-curX= horizontal(curX, curY, 12);
+curX= horizontal(curX, curY, 12, 1);
 curX+= (unit * 2);
-curX= horizontal(curX, curY, 12);
+curX= horizontal(curX, curY, 12, 1);
 curX-= (unit * 26);
 curY+= (unit * 4);
-curX= horizontal(curX, curY, 25);
-curY-= (unit * 4);
-curY= vertical(curX, curY, 8);
+curX= horizontal(curX, curY, 25, 1);
+curY-= (unit * 3);
+curY= vertical(curX, curY, 6, 1);
+// curX-= (unit * 1);
+curX= horizontal(curX, curY, 5, -1);
+curY-= (unit * 6);
+curY= vertical(curX, curY, 24, 1);
+curX= horizontal(curX, curY, 5, 1);
+curY= vertical(curX, curY, 3, 1);
+curX= horizontal(curX, curY, 25, -1);
+curY= vertical(curX, curY, 3, -1);
+curX= horizontal(curX, curY, 5, 1);
+curY= vertical(curX, curY, 21, -1);
+curY-= unit;
+curY= vertical(curX, curY, 3, -1);
+curX-= (unit * 5);
+curY+= unit;
+curY= vertical(curX, curY, 3, 1);
+curY+= unit;
+curY= vertical(curX, curY, 2, 1);
+curX= horizontal(curX, curY, 5, 1);
+curX+= (unit * 6);
+curY-= (unit * 6);
+curY= vertical(curX, curY, 3, 1);
+console.log("curX: "+curX+" / curY: "+curY);
+curX+= (unit * 3);
+curY-= unit;
+console.log("curX: "+curX+" / curY: "+curY);
+curY= vertical(curX, curY, 3, -1);
+curX= 290;
+curY= 200;
+ctx.moveTo(curX,curY);
+curY= vertical(curX, curY, 2, 1);
+curX= horizontal(curX, curY, 3, 1);
+curY= vertical(curX, curY, 3, 1);
+curX+= (unit * 3);
+curY-= unit;
+curY= vertical(curX, curY, 2, -1);
+curX= horizontal(curX, curY, 3, 1);
+curY= vertical(curX, curY, 3, -1);
+curX-= (unit * 15);
+curY+= (unit * 20);
+curY= vertical(curX, curY, 2, -1);
+curX= horizontal(curX, curY, 2, -1);
+curY= vertical(curX, curY, 3, -1);
+curX= horizontal(curX, curY, 5, 1);
+curX+= (unit * 1);
+curX= horizontal(curX, curY, 5, 1);
+curY= vertical(curX, curY, 3, 1);
+curX+= (unit * 3);
+curY-= unit;
+curY= vertical(curX, curY, 2, -1);
+curX= horizontal(curX, curY, 6, 1);
+curX-= unit;
+curY+= (unit * 3);
+curX= horizontal(curX, curY, 14, -1);
+curX+= (unit * 3);
+curY+= unit;
+curY= vertical(curX, curY, 2, 1);
+curX= horizontal(curX, curY, 3, 1);
+curY= vertical(curX, curY, 3, 1);
+curX+= (unit * 3);
+curY-= unit;
+curY= vertical(curX, curY, 2, -1);
+curX= horizontal(curX, curY, 3, 1);
+curY= vertical(curX, curY, 3, -1);
 
-
+// ctx.fillStyle = "#202020";
+curX+= (unit * 4);
+curY-= (unit * 3);
+curX= horizontal(curX, curY, 4, 1);
+curY= vertical(curX, curY, 3, 1);
+curX= horizontal(curX, curY, 2, -1);
+curY= vertical(curX, curY, 3, 1);

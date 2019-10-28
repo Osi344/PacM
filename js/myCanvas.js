@@ -24,30 +24,6 @@ function vertical(x, y, nb, z) {
   return y;
 }
 
-function curve(x, y, way) {
-  var A, B, C;
-  if (a == 1) {
-    if (b == 1) {
-      y += 5;
-      
-    }
-    else {
-    }
-  }
-  else {
-    if (b == 1) {
-
-    }
-    else {
-
-    }
-  }
-
-  ctx.quadraticCurveTo(100, y, 100, y);
-  return (x, y);
-}
-
-
 // canvas
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
@@ -307,6 +283,16 @@ curX = horizontal(curX, curY, 3,-1);
 curY = vertical(curX, curY, 1,1);
 ctx.stroke(); // Draw it
 
+curX= 380;
+curY= 380;
+ctx.beginPath();
+ctx.moveTo(curX, curY);
+curX = horizontal(curX, curY, 2,-1);
+curY = vertical(curX, curY, 4,1);
+curX = horizontal(curX, curY, 7,1);
+curY = vertical(curX, curY, 4,-1);
+curX = horizontal(curX, curY, 2,-1);
+ctx.stroke(); // Draw it
 
 // cornerTR
 // ctx.quadraticCurveTo(100, 20, 100, 25);
