@@ -1,8 +1,19 @@
 // global
 
-var curX = 20;
-var curY = 20;
+var originX = originY = curX = curY = 20;
 var unit= 30;
+
+console.log("originX :"+originX+" curX: "+curX);
+console.log("originY :"+originY+" curY: "+curY);
+
+var leftX= originX + (unit * 1);
+console.log("leftX :"+leftX);
+var topY= originY + (unit * 4);
+console.log("topY :"+topY);
+var bottomY= originY + (unit * 23);
+console.log("bottomY :"+bottomY);
+var rightX= originX + (unit * 26);
+console.log("rightX :"+rightX+"\n-----\n");
 
 // function
 
