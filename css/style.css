@@ -12,3 +12,15 @@
     height: 35px;
     background: url('images/Pac-Man.png') 0 0;
   }
+
+  #sprite{
+      display: none;
+  }
+
+  #coordText{
+      border-style: solid;
+      border-width: 1;
+      border-color: chocolate;
+      /* width: 100px; */
+      /* height: 30px; */
+  }

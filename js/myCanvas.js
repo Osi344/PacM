@@ -1,6 +1,6 @@
 // global
 
-var originX = originY = curX = curY = 20;
+var originX = originY = curX = curY = 30;
 var unit= 30;
 
 console.log("originX :"+originX+" curX: "+curX);

@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- js / bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
+    
     <!-- font & icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Pacman</title>
+    <script src="./js/sprite.js"></script>
 </head>
 
 <header>
@@ -22,12 +23,19 @@
 </header>
 
 <body>
+    
+    <!-- canvas -->
     <div class="container pb-8 pt-8">
+        <p id="coordText">Coordonnées</p>
         <div class="row">
-            <div class="col-8">
-                <canvas id="myCanvas" class="paco" width="850" height="1000"></canvas>
+            <div class="col-8" onMouseMove="showCoords(event)" onMouseOut="clearCoords()">
+                <canvas id="myCanvas" class="paco" width="850" height="1000" ></canvas>
             </div>
         </div>
+    </div>
+        
+    <div>
+        <img src="images/pacman-sprite.png" alt="sprite" id="sprite">
     </div>
 
     <script src="./js/myCanvas.js"></script>

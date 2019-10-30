@@ -1,6 +1,6 @@
 // global
-var curX = 50;
-var curY = 50;
+var curX = 60;
+var curY = 60;
 // var unit = 30;
 
 // function
@@ -97,10 +97,10 @@ curY -= (unit * 6);
 curY = vertical(curX, curY, 3, 1);
 curX += (unit * 3);
 curY -= unit;
+// ctx.fillStyle = "#202020";
 curY = vertical(curX, curY, 3, -1);
-curX = 290;
-curY = 200;
-ctx.moveTo(curX, curY);
+curX -= (unit * 6);
+curY += (unit * 5);
 curY = vertical(curX, curY, 2, 1);
 curX = horizontal(curX, curY, 3, 1);
 curY = vertical(curX, curY, 3, 1);
@@ -111,7 +111,6 @@ curX = horizontal(curX, curY, 3, 1);
 curY = vertical(curX, curY, 3, -1);
 curX -= (unit * 13);
 curY += (unit * 15);
-// ctx.fillStyle = "#202020";
 curX = horizontal(curX, curY, 4, -1);
 curY = vertical(curX, curY, 3, 1);
 curX = horizontal(curX, curY, 2, 1);
